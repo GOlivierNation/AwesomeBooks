@@ -1,3 +1,4 @@
+![](https://img.shields.io/badge/AwesomeBooks-orange)
 # Book List App
 
 > This project contain a book list app prototype using Object oriented Programming approach.
@@ -30,9 +31,9 @@
 
 👤 **Olivier Gasominali**
 
-- GitHub: [@githubhandle](https://github.com/Golivier)
-- Twitter: [@ned_jwa](https://twitter.com/Golivier)
-- LinkedIn: [nedjwa-bouraiou](https://www.linkedin.com/in/olivier-gasominali/
+- [GitHub](https://github.com/GOlivierNation)
+- [Twitter](https://twitter.com/Golivier_Nation)
+- [LinkedIn](https://www.linkedin.com/in/olivier-gasominali-866962108/)
 
 👤 **Bashir Yussuf Olamilekan (Bash)**
 
