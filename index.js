@@ -11,7 +11,6 @@ function bookExists(book) {
   return false;
 }
 
-
 // Add a new book to the list of books
 function addBook(book) {
   if (!bookExists(book)) {
