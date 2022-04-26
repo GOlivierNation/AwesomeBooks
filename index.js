@@ -14,6 +14,13 @@ function bookExists(book) {
 // Books Values & Functions
 const booksList = document.getElementById('Listing');
 
+// Updates the Local Storage
+function LocalStorage() {
+  if (StorageCheck('localStorage')) {
+    localStorage.setItem('books', JSON.stringify(books));
+  }
+}
+
 // Remove a book from the list of lists
 function removeBook(book) {
   for (let i = 0; i < books.length; i += 1) {
@@ -77,13 +84,6 @@ function StorageCheck(type) {
       || e.name === 'QuotaExceededError'
       || e.name === 'NS_ERROR_DOM_QUOTA_REACHED')
       && (Store && Store.length !== 0);
-  }
-}
-
-// Updates the Local Storage
-function LocalStorage() {
-  if (StorageCheck('localStorage')) {
-    localStorage.setItem('books', JSON.stringify(books));
   }
 }
 
