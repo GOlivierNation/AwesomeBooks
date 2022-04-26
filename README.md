@@ -1,4 +1,4 @@
-# My Portffolio Part II
+# Book List App
 
 > This project contain a book list app prototype using Object oriented Programming approach.
 

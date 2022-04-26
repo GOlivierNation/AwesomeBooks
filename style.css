@@ -21,3 +21,7 @@
 #AddBook input {
   margin: 8px;
 }
+
+hr {
+  width: 200px;
+}
