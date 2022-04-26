@@ -14,6 +14,17 @@ function bookExists(book) {
 // Books Values & Functions
 const booksList = document.getElementById('Listing');
 
+// Remove a book from the list of lists
+function removeBook(book) {
+  for (let i = 0; i < books.length; i += 1) {
+    if (books[i].title === book.title && books[i].author === book.author) {
+      books.splice(i, 1);
+      LocalStorage();
+      return;
+    }
+  }
+}
+
 // Shows the added book in html
 function displayElement(book) {
   const DisplayBooks = document.createElement('div');
@@ -47,18 +58,6 @@ function addBook(book) {
     return;
   }
   alert('The Book and Author already exist');
-}
-
-
-// Remove a book from the list of lists
-function removeBook(book) {
-  for (let i = 0; i < books.length; i += 1) {
-    if (books[i].title === book.title && books[i].author === book.author) {
-      books.splice(i, 1);
-      LocalStorage();
-      return;
-    }
-  }
 }
 
 // Local Storage Functions
