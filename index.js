@@ -1,6 +1,16 @@
 // Declare books list
 let books = [];
 
+// Check if a book exists
+function bookExists(book) {
+  for (let i = 0; i < books.length; i += 1) {
+    if (books[i].title === book.title && books[i].author === book.author) {
+      return true;
+    }
+  }
+  return false;
+}
+
 // Add a new book to the list of books
 function addBook(book) {
   if (!bookExists(book)) {
@@ -10,6 +20,18 @@ function addBook(book) {
     return;
   }
   alert('The Book and Author already exist');
+}
+
+
+// Remove a book from the list of lists
+function removeBook(book) {
+  for (let i = 0; i < books.length; i += 1) {
+    if (books[i].title === book.title && books[i].author === book.author) {
+      books.splice(i, 1);
+      LocalStorage();
+      return;
+    }
+  }
 }
 
 // Shows the added book in html
@@ -38,27 +60,6 @@ function displayElement(book) {
 
 // Books Values & Functions
 const booksList = document.getElementById('Listing');
-
-// Check if a book exists
-function bookExists(book) {
-  for (let i = 0; i < books.length; i += 1) {
-    if (books[i].title === book.title && books[i].author === book.author) {
-      return true;
-    }
-  }
-  return false;
-}
-
-// Remove a book from the list of lists
-function removeBook(book) {
-  for (let i = 0; i < books.length; i += 1) {
-    if (books[i].title === book.title && books[i].author === book.author) {
-      books.splice(i, 1);
-      LocalStorage();
-      return;
-    }
-  }
-}
 
 // Local Storage Functions
 // Check if Storage is available
