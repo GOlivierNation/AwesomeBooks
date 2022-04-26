@@ -11,6 +11,9 @@ function bookExists(book) {
   return false;
 }
 
+// Books Values & Functions
+const booksList = document.getElementById('Listing');
+
 // Shows the added book in html
 function displayElement(book) {
   const DisplayBooks = document.createElement('div');
@@ -57,9 +60,6 @@ function removeBook(book) {
     }
   }
 }
-
-// Books Values & Functions
-const booksList = document.getElementById('Listing');
 
 // Local Storage Functions
 // Check if Storage is available
