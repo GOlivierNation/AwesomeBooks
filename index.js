@@ -10,16 +10,6 @@ function bookExists(book) {
   }
   return false;
 }
-// Add a new book to the list of books
-function addBook(book) {
-  if (!bookExists(book)) {
-    books.push(book);
-    displayElement(book);
-    LocalStorage();
-    return;
-  }
-  alert('The Book and Author already exist');
-}
 
 // Shows the added book in html
 function displayElement(book) {
@@ -43,6 +33,17 @@ function displayElement(book) {
     removeBook(book);
     DisplayBooks.remove();
   });
+}
+
+// Add a new book to the list of books
+function addBook(book) {
+  if (!bookExists(book)) {
+    books.push(book);
+    displayElement(book);
+    LocalStorage();
+    return;
+  }
+  alert('The Book and Author already exist');
 }
 
 // Books Values & Functions
