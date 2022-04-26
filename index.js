@@ -14,6 +14,26 @@ function bookExists(book) {
 // Books Values & Functions
 const booksList = document.getElementById('Listing');
 
+// Local Storage Functions
+// Check if Storage is available
+function StorageCheck(type) {
+  let Store;
+  try {
+    Store = window[type];
+    const x = '__storage_test__';
+    Store.setItem(x, x);
+    Store.removeItem(x);
+    return true;
+  } catch (e) {
+    return e instanceof DOMException && (
+      e.code === 22
+      || e.code === 1014
+      || e.name === 'QuotaExceededError'
+      || e.name === 'NS_ERROR_DOM_QUOTA_REACHED')
+      && (Store && Store.length !== 0);
+  }
+}
+
 // Updates the Local Storage
 function LocalStorage() {
   if (StorageCheck('localStorage')) {
@@ -65,26 +85,6 @@ function addBook(book) {
     return;
   }
   alert('The Book and Author already exist');
-}
-
-// Local Storage Functions
-// Check if Storage is available
-function StorageCheck(type) {
-  let Store;
-  try {
-    Store = window[type];
-    const x = '__storage_test__';
-    Store.setItem(x, x);
-    Store.removeItem(x);
-    return true;
-  } catch (e) {
-    return e instanceof DOMException && (
-      e.code === 22
-      || e.code === 1014
-      || e.name === 'QuotaExceededError'
-      || e.name === 'NS_ERROR_DOM_QUOTA_REACHED')
-      && (Store && Store.length !== 0);
-  }
 }
 
 const BooksData = localStorage.getItem('books');
