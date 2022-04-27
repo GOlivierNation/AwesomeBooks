@@ -1,3 +1,5 @@
+/* eslint-disable no-use-before-define */
+/* eslint-disable max-classes-per-file */
 class Book {
   constructor(title, author) {
     this.title = title;
@@ -70,9 +72,7 @@ class Store {
 }
 
 document.addEventListener('DOMContentLoaded', Display.displayBooks);
-
 document.querySelector('#book-form').addEventListener('submit', (x) => {
- 
   x.preventDefault();
 
   const title = document.querySelector('#title').value;
@@ -88,7 +88,6 @@ document.querySelector('#book-form').addEventListener('submit', (x) => {
 });
 
 document.querySelector('#book-list').addEventListener('click', (x) => {
- 
   Display.deleteBook(x.target);
 
   Store.removeBook(x.target.previousElementSibling.previousElementSibling.textContent);
