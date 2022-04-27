@@ -4,8 +4,7 @@ body {
 
 .main-container {
   max-width: 500px;
-  margin: 0;
-  margin: auto;
+  margin: 0 auto;
 }
 
 .hr {
@@ -15,8 +14,7 @@ body {
 
 form {
   width: fit-content;
-  margin: 0;
-  margin: auto;
+  margin: 0 auto;
   text-align: end;
 }
 
@@ -57,19 +55,19 @@ span {
   position: absolute;
   right: 20px;
   top: 30%;
-  box-shadow: 2px 2px 0px 2px #000;
+  box-shadow: 2px 2px 0 2px #000;
   font-size: 18px;
   border: 2px solid #000;
 }
 
 .add {
-  box-shadow: 2px 2px 0px 2px #000;
+  box-shadow: 2px 2px 0 2px #000;
   font-size: 18px;
   border: 2px solid #000;
 }
 
 .add-text {
   font-weight: bold;
-  font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+  font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
   font-size: 18px;
 }
