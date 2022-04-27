@@ -18,7 +18,7 @@ class Display {
     const bookDisplay = document.createElement('div');
     bookDisplay.className = 'bookList1';
     bookDisplay.innerHTML = `
-        <p class="bookTitle">${book.title}</p>
+        <p class="bookTitle">"${book.title}"</p>
         <p>by<span></span>${book.author}</p>
         <button class="delete">Remove</button>
         `;
