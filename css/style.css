@@ -4,7 +4,8 @@ body {
 
 .main-container {
   max-width: 500px;
-  margin: 0 auto;
+  margin: 0;
+  margin: auto;
 }
 
 .hr {
@@ -14,7 +15,8 @@ body {
 
 form {
   width: fit-content;
-  margin: 0 auto;
+  margin: 0;
+  margin: auto;
   text-align: end;
 }
 
