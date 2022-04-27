@@ -23,3 +23,9 @@
     "build/"
   ]
 }
+{
+    "max-classes-per-file": [
+        "error",
+        { "ignoreExpressions": true, "max": 3 }
+    ]
+}
