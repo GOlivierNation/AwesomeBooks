@@ -1,3 +1,6 @@
+rules: {
+'max-classes-per-file': 'false',
+}
 class Book {
   constructor(title, author) {
     this.title = title;
