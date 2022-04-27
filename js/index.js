@@ -72,24 +72,16 @@ class Display {
 document.addEventListener('DOMContentLoaded', Display.displayBooks);
 
 document.querySelector('#book-form').addEventListener('submit', (x) => {
- 
   x.preventDefault();
-
   const title = document.querySelector('#title').value;
   const author = document.querySelector('#author').value;
-
   const book = new Book(title, author);
-
   Display.addBookToList(book);
-
   Store.addBook(book);
-
   Display.clearFields();
 });
 
 document.querySelector('#book-list').addEventListener('click', (x) => {
- 
   Display.deleteBook(x.target);
-
   Store.removeBook(x.target.previousElementSibling.previousElementSibling.textContent);
 });
