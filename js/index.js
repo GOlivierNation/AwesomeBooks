@@ -53,6 +53,7 @@ class Store {
         // eslint-disable-next-line no-use-before-define
         DisplayBook(book);
         this.books.push(book);
+        alert('Book added successfully');
         this.ReloadLocalStorage();
         return;
       }
@@ -64,6 +65,7 @@ class Store {
       for (let x = 0; x < this.books.length; x += 1) {
         if (this.books[x].title === book.title && this.books[x].author === book.author) {
           this.books.splice(x, 1);
+          alert('Book remove successfully');
           this.ReloadLocalStorage();
           return;
         }
