@@ -1,73 +1,226 @@
-body {
+* {
+  margin: 0;
+  padding: 0;
+  font-family: 'Courier New', Courier, monospace;
+}
+
+header {
+  position: fixed;
+  right: 0;
+  left: 0;
+  margin: 10px 10%;
+}
+
+#navbar {
+  border: 4px solid #000;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px;
+  height: 40px;
+}
+
+#navbar ul {
+  display: flex;
+  list-style: none;
+  gap: 10px;
+  align-items: center;
+}
+
+#navbar a {
+  text-decoration: none;
+  color: #000;
+  font-size: 20px;
+}
+
+.line {
+  width: 3px;
+  height: 20px;
+  background-color: #000;
+  border-radius: 10px;
+}
+
+#current-date {
+  float: right;
+  font-size: 18px;
+}
+
+#headline {
+  margin-top: 20px;
+  display: flex;
+  justify-content: center;
+}
+
+#headline h1 {
+  padding: 8px;
+  margin-bottom: 50px;
   text-align: center;
 }
 
-.main-container {
-  max-width: 500px;
-  margin: 0 auto;
-}
-
-.hr {
-  width: 100px;
-  border: 2px solid gray;
-}
-
-form {
-  width: fit-content;
-  margin: 0 auto;
-  text-align: end;
-}
-
-#book-list {
-  margin-top: 30px;
-  margin-bottom: 30px;
-  border: 4px solid black;
-}
-
-input {
-  margin-bottom: 10px;
-  border: 2px solid #000;
-  border-radius: 4px;
-  font-size: 16px;
-  padding: 4px 8px;
-  width: 300px;
-  height: 20px;
-}
-
-.bookTitle {
-  margin-right: 20px;
-  margin-left: 20px;
-}
-
-span {
-  margin-right: 20px;
-}
-
-.bookList1 {
+.book {
+  padding: 0 10px;
   display: flex;
-  position: relative;
+  justify-content: space-between;
 }
 
-.bookList1:nth-child(even) { background: #ccc; }
-.bookList1:nth-child(odd) { background: #fff; }
-
-.delete {
-  position: absolute;
-  right: 20px;
-  top: 30%;
-  box-shadow: 2px 2px 0 2px #000;
-  font-size: 18px;
-  border: 2px solid #000;
+.book:nth-child(2n+1) {
+  background-color: #ddd;
 }
 
-.add {
-  box-shadow: 2px 2px 0 2px #000;
-  font-size: 18px;
-  border: 2px solid #000;
+.BooksTitle,
+.book-author,
+.remove {
+  margin: 8px;
 }
 
-.add-text {
+.book-author,
+.BooksTitle {
+  font-size: 1.2rem;
+  font-weight: normal;
+}
+
+#AwesomeBooks {
+  display: flex;
+  justify-content: center;
+  height: 100vh;
+  flex-direction: column;
+  margin: 0 10%;
+  align-items: center;
+  font-size: 20px;
+  gap: 20px;
+}
+
+#Listing {
+  width: 100%;
+  min-height: 200px;
+  display: flex;
+  font-size: 20px;
+  flex-direction: column;
+  border: 3px solid;
+  border-radius: 5px;
+  max-height: 50vh;
+  overflow-y: scroll;
+}
+
+.BooksStore {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: baseline;
+}
+
+#AddBookForm {
+  height: 100vh;
+  display: none;
+  justify-content: center;
+}
+
+#AddBooks {
+  width: 250px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 10px;
+  justify-content: center;
+}
+
+#AddBookForm input[type="submit"] {
+  padding: 5px 10px;
+  cursor: pointer;
+  margin-left: 304px;
   font-weight: bold;
-  font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
   font-size: 18px;
+}
+
+#AddBookForm input[type="text"] {
+  width: 400px;
+  padding: 5px;
+  border: 3px solid;
+  font-size: 18px;
+  border-radius: 3px;
+}
+
+button.remove {
+  padding: 5px 10px;
+  font-weight: bold;
+  font-size: 18px;
+  cursor: pointer;
+}
+
+.remove,
+#AddBookForm input[type="submit"] {
+  transition: 200ms;
+  border: 3px solid;
+  border-radius: 3px;
+  box-shadow: 4px 4px 0 1px black;
+  background-color: whitesmoke;
+}
+
+.remove:hover,
+#AddBookForm input[type="submit"]:hover {
+  transform: scale(1.02);
+}
+
+@keyframes titleShake {
+  0% {
+    transform: translateX(-5px);
+  }
+
+  5% {
+    transform: translateX(10px);
+  }
+
+  10% {
+    transform: translateX(-5px);
+  }
+
+  15% {
+    transform: translateX(0);
+  }
+
+  100% {
+    transform: translateX(0);
+  }
+}
+
+.empty-library {
+  margin: auto;
+}
+
+#contact-info {
+  height: 100vh;
+  display: none;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  gap: 20px;
+}
+
+#contact-info h1 {
+  text-align: center;
+  font-size: 30px;
+  margin-bottom: 50px;
+}
+
+#contact-info ul {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: 8px;
+  margin: 0 auto;
+}
+
+footer p {
+  position: fixed;
+  bottom: 0;
+  right: 0;
+  left: 0;
+  font-size: 18px;
+  border: 3px solid;
+  margin: 10px 10%;
+  padding: 10px;
+  height: 30px;
+}
+
+.active {
+  color: #c23030 !important;
 }

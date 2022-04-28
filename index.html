@@ -1,28 +1,65 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Awesome Books</title>
-    <link rel="stylesheet" href="css/style.css" />
-  </head>
-  <body>
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/style.css">
+    <title>AwesomeBooks</title>
+</head>
+<body>
+    <header>
+        <nav id="navbar">
+            <a href="">Awesome Books</a>
+            <ul>
+                <li>
+                    <a href="" id="ListBookButton" class="active">Book List</a>
+                </li>
+                <li>
+                    <div class="line"></div>
+                </li>
+                <li>
+                    <a href="" id="AddNewBookBtn">Add New</a>
+                </li>
+                <li>
+                    <div class="line"></div>
+                </li>
+                <li>
+                    <a href="" id="ContactsButton">Contact</a>
+                </li>
+            </ul>            
+        </nav>
+        <div id="current-date"></div>
+    </header>
+    <main>
+        <section id="AwesomeBooks">
+            <h1>All Awesome Books</h1>
+            <div id="Listing"></div>
+        </section>
 
-    <div class="main-container">
-      <h1>All Awesome books</h1>
+        <section id="AddBookForm">
+            <form action="#" id="AddBooks">
+                <h2>Add New Books</h2>
+                <input type="text" placeholder="Title" name="title" required>
+                <input type="text" placeholder="Author" name="author" required>
+                <input type="submit" value="Add Book">
+            </form>
+        </section>
 
-      <div id="book-list"></div>
-
-      <hr class="hr">
-      <p class="add-text">Add a new book</p>
-      <form id="book-form">
-        <input type="text" required placeholder="Title" id="title" /><br />
-        <input type="text" required placeholder="author" id="author" /><br />
-        <button class="add" id="add-button" type="submit">Add</button>
-      </form>
-    </div>
-
+        <section id="contact-info">
+            <h1> Contact information</h1>
+            <p>Do have any questions? or just want to say "Hello"?
+            <br>You can reach out to us!</p>
+            <ul>
+                <li>Our e-mail: example@mail.com</li>
+                <li>Our phone number: +250-000-000</li>
+                <li>Our address: KK444st, Kigali city, Microverse</li>
+            </ul>
+        </section>
+    </main>
+    <footer>
+            <p>Copyright <span id="year"></span></p>
+    </footer>
     <script src="js/index.js"></script>
-  </body>
+</body>
 </html>
